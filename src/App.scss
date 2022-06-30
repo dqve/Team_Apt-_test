@@ -1,0 +1,524 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+// dev width : 1536px
+
+$viewW: 100vw;
+
+$widthScale: calc(100%);
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("./assets/fonts/Inter-Regular.woff") format("woff"),
+    url("./assets/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Light";
+  src: url("./assets/fonts/Inter-Light.woff") format("woff"), url("./assets/fonts/Inter-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Semi";
+  src: url("./assets/fonts/Inter-SemiBold.woff") format("woff"),
+    url("./assets/fonts/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("./assets/fonts/Inter-Bold.woff") format("woff"), url("./assets/fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*****/
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("./assets/fonts/Poppins-Regular.woff") format("woff"),
+    url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("./assets/fonts/Poppins-Light.woff") format("woff"),
+    url("./assets/fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("./assets/fonts/Poppins-Bold.woff") format("woff"), url("./assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+p {
+  margin: 2px;
+}
+
+.App {
+  background-image: url("./assets/img/background.png");
+  background-size: cover;
+  background-position: center;
+  height: min-content;
+  padding-inline: 7vw;
+  padding-top: 5vh;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  z-index: -10;
+  position: relative;
+  width: auto;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 45px;
+  overflow: hidden;
+  img {
+    margin-top: 0%;
+  }
+  .calender {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0%;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 0.65vw;
+
+      .text1 {
+        font-family: "Inter-Bold";
+        font-size: 2.3vh;
+        color: rgb(255, 255, 255);
+      }
+      .text2 {
+        font-family: "Inter-Regular";
+        font-size: 1.8vh;
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+}
+
+.stars {
+  position: absolute;
+  z-index: -1;
+  top: 17.7vh;
+  width: 78vw;
+  align-self: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 7vh;
+  overflow: hidden;
+  margin-top: 0%;
+
+  .header {
+    // display: flex;
+    // flex-direction: row;
+    margin-top: 0%;
+    overflow: hidden;
+    text-align: center;
+    line-height: 6.8vh;
+    height: 16.8vh;
+    letter-spacing: -0.015em;
+    padding-top: 1.5%;
+    span:nth-child(1) {
+      animation-delay: 2.5s;
+    }
+    span:nth-child(1) {
+      animation-delay: 2.5s;
+    }
+  }
+
+  .info {
+    margin-top: 0%;
+    overflow: hidden;
+    padding-top: 3vh;
+    text-align: center;
+    line-height: 4vh;
+    height: 8.6vh;
+    letter-spacing: -0.06em;
+
+    p {
+      margin-top: 0%;
+    }
+  }
+
+  .text1 {
+    margin-top: 0%;
+    font-family: "Poppins-Regular";
+    font-style: normal;
+    font-size: 10vh;
+    text-align: center;
+    animation-delay: 0.65s;
+
+    color: #ffffff;
+  }
+
+  .text2 {
+    margin-top: 0%;
+    font-family: "Poppins-Bold";
+    font-style: normal;
+    font-size: 10vh;
+    text-align: center;
+    animation-delay: 0.65s;
+
+    color: #ffffff;
+  }
+
+  .text3 {
+    font-family: "Inter-Bold";
+    font-style: normal;
+    font-size: 3.87vh;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .info {
+    font-family: "Inter-Regular";
+    font-style: normal;
+    font-size: 3.87vh;
+    text-align: center;
+
+    color: #ffffff;
+  }
+}
+
+.how-to {
+  box-sizing: border-box;
+  margin-top: 0%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3.15vh;
+  padding: 3.15vh 1.78vw;
+  gap: 0px;
+
+  width: 57.2vh;
+  height: 40vh;
+
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.39) -213.5%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset 0px -1px 11px rgba(255, 255, 255, 0.17), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+  border-radius: 7.6px;
+
+  .htext-1 {
+    font-family: "Inter-Bold";
+    font-style: normal;
+    font-size: 2vh;
+    text-align: center;
+    line-height: 3.4vh;
+
+    color: #ffffff;
+    align-self: center;
+  }
+
+  .htext-2 {
+    font-family: "Inter-Regular";
+    font-style: normal;
+    font-size: 2.1vh;
+    text-align: left;
+    line-height: 3vh;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    padding: 2.6vh;
+
+    .htext-22 {
+      font-family: "Inter-Bold";
+    }
+  }
+
+  .htext-3 {
+    font-family: "Inter-Regular";
+    font-style: normal;
+    font-size: 2.1vh;
+    text-align: left;
+    line-height: 3vh;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+  }
+}
+
+.tip {
+  margin-top: 1.57vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1.3vh;
+  gap: 0px;
+
+  width: 48.7vh;
+  height: 9vh;
+
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  /* Inside auto layout */
+
+  flex: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  .ttext-1 {
+    align-self: flex-start;
+  }
+
+  p {
+    font-family: "Inter-Regular";
+    font-style: normal;
+    font-size: 1.8vh;
+    text-align: left;
+    line-height: 3vh;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6vh;
+  button {
+    span {
+      width: 10.5vw;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 1vh 1vw;
+    gap: 0.5vh;
+
+    width: 14.8vw;
+    height: 7.4vh;
+
+    background: #ecab03;
+    border-radius: 4px;
+    border: none;
+
+    font-family: "Inter-Semi";
+    font-style: normal;
+    font-size: 1.84vh;
+    line-height: 2.23vh;
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+}
+
+.image {
+  position: relative;
+  z-index: -10;
+  justify-content: center;
+  padding: 0%;
+  margin: 0%;
+  // margin-top: 261px;
+  height: 40vh;
+}
+
+.flare {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  z-index: -5;
+}
+
+.coinPot {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  bottom: 0;
+  width: 38vw;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: -1;
+}
+
+.coinL {
+  position: absolute;
+  bottom: 40%;
+  width: 10vw;
+  margin: auto;
+  left: 0;
+  right: 40%;
+  text-align: left;
+  animation-delay: 1s;
+  animation: bounce 3s;
+  animation-iteration-count: infinite;
+}
+
+.coinR {
+  position: absolute;
+  bottom: 20%;
+  width: 8vw;
+  margin: auto;
+  left: 72%;
+  text-align: left;
+  animation-delay: 1.65s;
+  animation: bounce 3.5s;
+  animation-iteration-count: infinite;
+}
+
+.bg-stars {
+  img {
+    position: absolute;
+    animation: starBounce 15s 5 ease;
+    bottom: 0px;
+    z-index: -5;
+  }
+  img:nth-child(1) {
+    left: 49vw;
+    animation-delay: 3.5s;
+  }
+  img:nth-child(2) {
+    left: 25vw;
+    animation-delay: 6.5s;
+  }
+  img:nth-child(3) {
+    left: 37vw;
+    animation-delay: 0.5s;
+  }
+  img:nth-child(4) {
+    left: 40vw;
+    animation-delay: 2.5s;
+  }
+  img:nth-child(5) {
+    left: 37vw;
+    animation-delay: 4.5s;
+  }
+  img:nth-child(6) {
+    left: 32vw;
+    animation-delay: 7.5s;
+  }
+}
+
+//Animations
+
+.starBounce {
+  animation-delay: 1.65s;
+  animation: bounce 3.5s;
+  animation-iteration-count: infinite;
+}
+
+.fadeInUp {
+  animation: starBounce 1s 0 0.5s; //name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s;
+}
+
+.fade-in-in {
+  animation: fadeInIn 1.75s;
+}
+
+
+@keyframes fadeIn {
+  from {
+    margin-top: 100%;
+    transform: translateY(50px);
+  }
+  to {
+    margin-top: 0%;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInIn {
+  from {
+    opacity: 0;
+    transform: translateY(55px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes starBounce {
+  0% {
+    opacity: 0;
+    transform: translateX(-1rem);
+    transform: translateZ(-1rem);
+    transform: translateY(0rem);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(-5rem);
+    transform: translateZ(10rem);
+    transform: translateY(-50rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0rem);
+    transform: translateZ(5rem);
+    transform: translateY(-60rem);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-40px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
