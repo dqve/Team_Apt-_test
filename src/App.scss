@@ -3,9 +3,13 @@
 
 // dev width : 1536px
 
+$devWidth: 1536px;
+
 $viewW: 100vw;
 
-$widthScale: calc(100%);
+$widthScale: calc(1536px / 100);
+
+/** fonts **/
 
 @font-face {
   font-family: "Inter-Regular";
@@ -69,6 +73,8 @@ $widthScale: calc(100%);
   font-display: swap;
 }
 
+/** Styles **/
+
 html {
   scroll-behavior: smooth;
   overflow-y: scroll;
@@ -93,6 +99,7 @@ p {
   z-index: -10;
   position: relative;
   width: auto;
+  overflow-x: hidden;
 }
 
 .Header {
@@ -158,15 +165,14 @@ p {
     margin-top: 0%;
     overflow: hidden;
     text-align: center;
-    line-height: 6.8vh;
-    height: 16.8vh;
+    line-height: 6vh;
     letter-spacing: -0.015em;
     padding-top: 1.5%;
     span:nth-child(1) {
-      animation-delay: 2.5s;
+      padding-top: 5px;
     }
     span:nth-child(1) {
-      animation-delay: 2.5s;
+      padding-top: 5px;
     }
   }
 
@@ -176,10 +182,24 @@ p {
     padding-top: 3vh;
     text-align: center;
     line-height: 4vh;
-    height: 8.6vh;
     letter-spacing: -0.06em;
+    max-height: 145px;
 
     p {
+      margin-top: 0%;
+      font-family: "Inter-Regular";
+      font-size: 29.5px;
+      /* or 21px */
+
+      text-align: center;
+      letter-spacing: -0.06em;
+    }
+
+    .text-3 {
+      font-family: "Inter-Bold";
+    }
+
+    span {
       margin-top: 0%;
     }
   }
@@ -188,9 +208,10 @@ p {
     margin-top: 0%;
     font-family: "Poppins-Regular";
     font-style: normal;
-    font-size: 10vh;
+    font-size: 70px;
     text-align: center;
-    animation-delay: 0.65s;
+    animation-delay: 0.13s;
+    display: inline-block;
 
     color: #ffffff;
   }
@@ -199,9 +220,10 @@ p {
     margin-top: 0%;
     font-family: "Poppins-Bold";
     font-style: normal;
-    font-size: 10vh;
+    font-size: 70px;
     text-align: center;
-    animation-delay: 0.65s;
+    animation-delay: 0.14s;
+    display: inline-block;
 
     color: #ffffff;
   }
@@ -222,6 +244,18 @@ p {
     text-align: center;
 
     color: #ffffff;
+
+    p:nth-child(1) {
+      animation-delay: 0.12s;
+    }
+
+    p:nth-child(2) {
+      animation-delay: 0.11s;
+    }
+
+    p:before {
+      opacity: 0;
+    }
   }
 }
 
@@ -232,12 +266,14 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  align-self: center;
   margin-top: 3.15vh;
-  padding: 3.15vh 1.78vw;
+  padding: 24px 27px;
   gap: 0px;
 
-  width: 57.2vh;
-  height: 40vh;
+  width: auto;
+  height: auto;
+  max-width: 425px;
 
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.39) -213.5%, rgba(255, 255, 255, 0) 100%);
   box-shadow: inset 0px -1px 11px rgba(255, 255, 255, 0.17), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
@@ -246,9 +282,9 @@ p {
   .htext-1 {
     font-family: "Inter-Bold";
     font-style: normal;
-    font-size: 2vh;
+    font-size: 16px;
     text-align: center;
-    line-height: 3.4vh;
+    line-height: 26px;
 
     color: #ffffff;
     align-self: center;
@@ -257,9 +293,9 @@ p {
   .htext-2 {
     font-family: "Inter-Regular";
     font-style: normal;
-    font-size: 2.1vh;
+    font-size: 14px;
     text-align: left;
-    line-height: 3vh;
+    line-height: 22px;
     margin: 0;
     color: #ffffff;
     letter-spacing: -0.02em;
@@ -273,9 +309,9 @@ p {
   .htext-3 {
     font-family: "Inter-Regular";
     font-style: normal;
-    font-size: 2.1vh;
+    font-size: 14px;
     text-align: left;
-    line-height: 3vh;
+    line-height: 22px;
     margin: 0;
     color: #ffffff;
     letter-spacing: -0.02em;
@@ -287,12 +323,13 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   align-items: flex-end;
   padding: 1.3vh;
   gap: 0px;
 
-  width: 48.7vh;
-  height: 9vh;
+  width: auto;
+  height: auto;
 
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -327,7 +364,7 @@ p {
   padding-top: 6vh;
   button {
     span {
-      width: 10.5vw;
+      width: 161px;
     }
     display: flex;
     flex-direction: row;
@@ -337,7 +374,7 @@ p {
     padding: 1vh 1vw;
     gap: 0.5vh;
 
-    width: 14.8vw;
+    width: 225px;
     height: 7.4vh;
 
     background: #ecab03;
@@ -447,7 +484,7 @@ p {
   }
 }
 
-//Animations
+/* Animations */
 
 .starBounce {
   animation-delay: 1.65s;
@@ -467,15 +504,16 @@ p {
   animation: fadeInIn 1.75s;
 }
 
-
 @keyframes fadeIn {
   from {
     margin-top: 100%;
     transform: translateY(50px);
+    opacity: 0;
   }
   to {
     margin-top: 0%;
     transform: translateY(0px);
+    opacity: 1;
   }
 }
 
@@ -520,5 +558,81 @@ p {
   }
 }
 
-@media only screen and (max-width: 768px) {
+/* Media Queries */
+
+@media only screen and (max-width: 765px) {
+  br {
+    display: none;
+  }
+
+  .Content {
+    .text1 {
+      font-size: 40px;
+    }
+    .text2 {
+      font-size: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  br {
+    display: none;
+  }
+
+  .Content {
+    .text1 {
+      font-size: 50px;
+    }
+    .text2 {
+      font-size: 50px;
+    }
+
+    .info {
+      p {
+        margin-top: 0%;
+        font-family: "Inter-Regular";
+        font-size: 19px;
+        text-align: center;
+        letter-spacing: -0.06em;
+      }
+    }
+  }
+
+  .coinPot {
+    width: 270px;
+  }
+
+  .flare {
+    width: 100%;
+    z-index: -5;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .image {
+    height: 30vh;
+  }
+
+  .coinL {
+    position: absolute;
+    bottom: 40%;
+    width: 85px;
+    left: -20%;
+  }
+
+  .coinR {
+    position: absolute;
+    bottom: 20%;
+    width: 70px;
+    right: 2%;
+  }
+
+  .flare {
+    position: absolute;
+    width: 180%;
+    left: -40%;
+  }
 }

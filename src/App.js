@@ -21,8 +21,8 @@ function App() {
   return (
     <div className="App">
       <div className="Header">
-        <img src={logo} alt='logo' className='logo fade-in-in' />
-        <div className='calender fade-in-in'>
+        <img src={logo} alt='logo' className='logo fade-in' />
+        <div className='calender fade-in'>
           <img src={calender} alt='calender' />
           <div className='' >
             <p className='text1'>Day 1</p>
@@ -32,16 +32,17 @@ function App() {
       </div>
 
       <div className="Content">
-        <p className='header fade-in-in'>
-          <span className='text1 fade-in-in'>Unlock to<br /></span>
-
+        
+        <p className='header'>
+          <span className='text1 fade-in-in'>Unlock to</span>
+          <br />
           <span className='text2 fade-in-in'> Power your dreams!</span>
 
         </p>
         <div className='info'>
-          <p className='fade-in'>Stand a chance to win</p>
+          <p className='fade-in-in'>Stand a chance to win</p>
 
-          <p className='fade-in'> <span className='text3'>N3,000,000</span> everyday for the next 5 days
+          <p className='fade-in-in'> <span className='text-3'>N3,000,000</span> everyday for the next 5 days
           </p>
         </div>
 
@@ -64,7 +65,6 @@ function App() {
             <img src={carret} alt='carret' className='carret' />
           </button>
         </div>
-
 
       </div>
 
